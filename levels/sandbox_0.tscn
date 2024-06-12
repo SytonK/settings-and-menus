@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cln7uxdkpr2le"]
+
+[ext_resource type="Script" path="res://UI/components/new scene button/change_scene_button.gd" id="1_y3vb2"]
+
+[node name="Sandbox0" type="Node2D"]
+
+[node name="ChangeSceneButton" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "change to scene 1"
+script = ExtResource("1_y3vb2")
