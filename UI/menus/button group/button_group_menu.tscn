@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvmfo6jweuqar"]
+
+[ext_resource type="ButtonGroup" uid="uid://cr7pxp8bmybb5" path="res://UI/menus/button group/new_button_group.tres" id="1_072jk"]
+
+[node name="ButtonGroupMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TopButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../BottomButton")
+focus_neighbor_bottom = NodePath("../HBoxContainer/MidButton")
+focus_next = NodePath("../HBoxContainer/LeftButton")
+focus_previous = NodePath("../BottomButton")
+toggle_mode = true
+button_group = ExtResource("1_072jk")
+text = "top"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="LeftButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../RightButton")
+focus_neighbor_top = NodePath("../../TopButton")
+focus_neighbor_right = NodePath("../MidButton")
+focus_neighbor_bottom = NodePath("../../BottomButton")
+focus_next = NodePath("../MidButton")
+focus_previous = NodePath("../../TopButton")
+toggle_mode = true
+button_group = ExtResource("1_072jk")
+text = "left"
+
+[node name="MidButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("1_072jk")
+text = "mid"
+
+[node name="RightButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../MidButton")
+focus_neighbor_top = NodePath("../../TopButton")
+focus_neighbor_right = NodePath("../LeftButton")
+focus_neighbor_bottom = NodePath("../../BottomButton")
+focus_next = NodePath("../../BottomButton")
+focus_previous = NodePath("../MidButton")
+toggle_mode = true
+button_group = ExtResource("1_072jk")
+text = "right"
+
+[node name="BottomButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../HBoxContainer/MidButton")
+focus_neighbor_bottom = NodePath("../TopButton")
+focus_next = NodePath("../TopButton")
+focus_previous = NodePath("../HBoxContainer/RightButton")
+toggle_mode = true
+button_group = ExtResource("1_072jk")
+text = "bottom"
