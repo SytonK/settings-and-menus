@@ -42,6 +42,7 @@ text = "top"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+alignment = 1
 
 [node name="LeftButton" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
