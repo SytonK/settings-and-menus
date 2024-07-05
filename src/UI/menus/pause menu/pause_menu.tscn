@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://womosciyseo2"]
 
-[ext_resource type="Script" path="res://UI/menus/pause menu/pause_menu.gd" id="1_3lbcx"]
-[ext_resource type="Script" path="res://UI/components/reload button/reload_button.gd" id="2_356n7"]
+[ext_resource type="Script" path="res://src/UI/menus/pause menu/pause_menu.gd" id="1_3lbcx"]
+[ext_resource type="Script" path="res://src/UI/components/reload button/reload_button.gd" id="2_356n7"]
 
 [node name="PauseMenu" type="VBoxContainer"]
 process_mode = 3
