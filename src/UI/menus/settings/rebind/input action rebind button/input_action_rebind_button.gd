@@ -22,4 +22,4 @@ func _set_action_name(new_action_name: String) -> void:
 	if action_input_label:
 		var events = InputMap.action_get_events(action_name)
 		print(action_name)
-		action_input_label.text = events[0].as_text() if events.size() > 0 else ""
+		action_input_label.text = events[0].as_text().trim_suffix(' (Physical)') if events.size() > 0 else ""
