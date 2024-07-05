@@ -12,9 +12,10 @@ func _ready() -> void:
 
 
 func _create_actions_list() -> void:
-	for action in InputMap.get_actions():
+	for action in InputActionsToRebind.input_actions:
 		var new_input_action_button: InputActionRebindButton = INPUT_ACTION_REBIND_BUTTON.instantiate()
 		
-		actions_list.add_child(new_input_action_button)
-		
 		new_input_action_button.action_name = action
+		new_input_action_button.action_label = InputActionsToRebind.input_actions[action]
+		
+		actions_list.add_child(new_input_action_button)
