@@ -10,6 +10,7 @@ var remapping_button: InputActionRebindButton = null
 
 
 func _ready() -> void:
+	_reset_actions()
 	_create_actions_list()
 
 
@@ -40,6 +41,16 @@ func _create_actions_list() -> void:
 		
 		actions_list.add_child(new_input_action_button)
 
+func _reset_actions() -> void:
+	InputMap.load_from_project_settings()
+	for action in actions_list.get_children():
+		action.queue_free()
+
 
 func _on_action_pressed(action: InputActionRebindButton):
 	remapping_button = action
+
+
+func _on_reset_button_pressed() -> void:
+	_reset_actions()
+	_create_actions_list()
