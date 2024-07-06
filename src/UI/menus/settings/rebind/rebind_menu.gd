@@ -23,6 +23,8 @@ func _input(event: InputEvent) -> void:
 			InputMap.action_add_event(remapping_button.action_name, event)
 			remapping_button.is_remaping =  false
 			remapping_button = null
+			
+			accept_event()
 
 
 func _create_actions_list() -> void:
