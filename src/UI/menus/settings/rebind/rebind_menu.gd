@@ -10,7 +10,6 @@ var remapping_button: InputActionRebindButton = null
 
 
 func _ready() -> void:
-	_reset_actions()
 	_create_actions_list()
 
 
