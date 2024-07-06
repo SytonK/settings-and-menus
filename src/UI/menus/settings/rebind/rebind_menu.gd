@@ -19,6 +19,9 @@ func _input(event: InputEvent) -> void:
 			event is InputEventKey ||
 			(event is InputEventMouseButton && event.is_pressed())
 		):
+			if event is InputEventMouseButton && event.double_click:
+				event.double_click = false
+			
 			InputMap.action_erase_events(remapping_button.action_name)
 			InputMap.action_add_event(remapping_button.action_name, event)
 			remapping_button.is_remaping =  false
