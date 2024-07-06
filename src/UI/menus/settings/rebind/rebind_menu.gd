@@ -25,7 +25,7 @@ func _input(event: InputEvent) -> void:
 			
 			InputMap.action_erase_events(remapping_button.action_name)
 			InputMap.action_add_event(remapping_button.action_name, event)
-			remapping_button.is_remaping =  false
+			remapping_button.is_remapping =  false
 			remapping_button = null
 			
 			accept_event()
@@ -37,7 +37,7 @@ func _create_actions_list() -> void:
 		
 		new_input_action_button.action_name = action
 		new_input_action_button.action_text = InputActionsToRebind.input_actions[action]
-		new_input_action_button.remaping.connect(_on_action_pressed)
+		new_input_action_button.remapping.connect(_on_action_pressed)
 		
 		actions_list.add_child(new_input_action_button)
 

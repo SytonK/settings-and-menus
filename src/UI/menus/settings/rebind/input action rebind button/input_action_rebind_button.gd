@@ -4,7 +4,7 @@ extends Button
 
 const REMAPING_TEXT: String = 'Press a key to select'
 
-signal remaping(input_action_rebind_button: InputActionRebindButton)
+signal remapping(input_action_rebind_button: InputActionRebindButton)
 
 @export var action_name: String : set = _set_action_name
 @export var action_text: String
@@ -12,7 +12,7 @@ signal remaping(input_action_rebind_button: InputActionRebindButton)
 @onready var action_name_label: Label = $MarginContainer/HBoxContainer/ActionNameLabel
 @onready var action_input_label: Label = $MarginContainer/HBoxContainer/ActionInputLabel
 
-var is_remaping: bool = false : set = _set_is_remapping
+var is_remapping: bool = false : set = _set_is_remapping
 
 
 func _ready() -> void:
@@ -35,13 +35,13 @@ func _set_action_input_label():
 
 
 func _on_pressed() -> void:
-	is_remaping = true
+	is_remapping = true
 
 
 func _set_is_remapping(new_is_remapping: bool):
-	is_remaping = new_is_remapping
-	if is_remaping:
+	is_remapping = new_is_remapping
+	if is_remapping:
 		action_input_label.text = REMAPING_TEXT
-		remaping.emit(self)
+		remapping.emit(self)
 	else:
 		_set_action_input_label()
