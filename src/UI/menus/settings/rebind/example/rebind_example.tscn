@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://y2p6ehnnl04i"]
+
+[ext_resource type="PackedScene" uid="uid://d0m0ksp5njn7v" path="res://src/UI/menus/settings/rebind/rebind_menu.tscn" id="1_7dbox"]
+[ext_resource type="Script" path="res://src/UI/menus/settings/rebind/example/rebind_example.gd" id="1_20rpc"]
+
+[node name="RebindExample" type="Node"]
+script = ExtResource("1_20rpc")
+
+[node name="RebindMenu" parent="." instance=ExtResource("1_7dbox")]
