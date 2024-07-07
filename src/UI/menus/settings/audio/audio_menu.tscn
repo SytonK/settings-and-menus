@@ -25,9 +25,42 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MuteMusicButton" parent="VBoxContainer" instance=ExtResource("1_cuptg")]
+[node name="MasterHBox" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/MasterHBox"]
+layout_mode = 2
+text = "master"
+
+[node name="MuteMusicButton" parent="VBoxContainer/MasterHBox" instance=ExtResource("1_cuptg")]
+layout_mode = 2
+bus_name = "Master"
+
+[node name="MusicHBox" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/MusicHBox"]
+layout_mode = 2
+text = "music"
+
+[node name="MuteMusicButton" parent="VBoxContainer/MusicHBox" instance=ExtResource("1_cuptg")]
 layout_mode = 2
 bus_name = "Music"
+
+[node name="EffectsHBox" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/EffectsHBox"]
+layout_mode = 2
+text = "effects
+"
+
+[node name="MuteMusicButton" parent="VBoxContainer/EffectsHBox" instance=ExtResource("1_cuptg")]
+layout_mode = 2
+bus_name = "Effects"
 
 [node name="MainMenuButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
