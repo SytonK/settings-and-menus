@@ -66,14 +66,14 @@ layout_mode = 2
 text = "effects
 "
 
-[node name="EffectsAudioSlider3" parent="VBoxContainer/EffectsHBox" instance=ExtResource("1_5jh1x")]
+[node name="SFXAudioSlider3" parent="VBoxContainer/EffectsHBox" instance=ExtResource("1_5jh1x")]
 layout_mode = 2
 size_flags_horizontal = 3
-bus_name = "Effects"
+bus_name = "SFX"
 
-[node name="MuteEffectsButton" parent="VBoxContainer/EffectsHBox" instance=ExtResource("1_cuptg")]
+[node name="MuteSFXButton" parent="VBoxContainer/EffectsHBox" instance=ExtResource("1_cuptg")]
 layout_mode = 2
-bus_name = "Effects"
+bus_name = "SFX"
 
 [node name="MainMenuButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2

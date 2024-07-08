@@ -24,4 +24,4 @@ bus = &"Music"
 
 [node name="SoundEffect" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_dsykv")
-bus = &"Effects"
+bus = &"SFX"
