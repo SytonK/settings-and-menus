@@ -36,7 +36,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 bus_name = "Master"
 
-[node name="MuteMusicButton" parent="VBoxContainer/MasterHBox" instance=ExtResource("1_cuptg")]
+[node name="MuteMasterButton" parent="VBoxContainer/MasterHBox" instance=ExtResource("1_cuptg")]
 layout_mode = 2
 bus_name = "Master"
 
@@ -71,7 +71,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 bus_name = "Effects"
 
-[node name="MuteMusicButton" parent="VBoxContainer/EffectsHBox" instance=ExtResource("1_cuptg")]
+[node name="MuteEffectsButton" parent="VBoxContainer/EffectsHBox" instance=ExtResource("1_cuptg")]
 layout_mode = 2
 bus_name = "Effects"
 
