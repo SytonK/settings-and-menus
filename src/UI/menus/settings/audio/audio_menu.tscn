@@ -57,21 +57,21 @@ bus_name = "Music"
 layout_mode = 2
 bus_name = "Music"
 
-[node name="EffectsHBox" type="HBoxContainer" parent="VBoxContainer"]
+[node name="SFXHBox" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/EffectsHBox"]
+[node name="Label" type="Label" parent="VBoxContainer/SFXHBox"]
 layout_mode = 2
 text = "effects
 "
 
-[node name="SFXAudioSlider3" parent="VBoxContainer/EffectsHBox" instance=ExtResource("1_5jh1x")]
+[node name="SFXAudioSlider3" parent="VBoxContainer/SFXHBox" instance=ExtResource("1_5jh1x")]
 layout_mode = 2
 size_flags_horizontal = 3
 bus_name = "SFX"
 
-[node name="MuteSFXButton" parent="VBoxContainer/EffectsHBox" instance=ExtResource("1_cuptg")]
+[node name="MuteSFXButton" parent="VBoxContainer/SFXHBox" instance=ExtResource("1_cuptg")]
 layout_mode = 2
 bus_name = "SFX"
 
