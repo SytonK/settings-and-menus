@@ -21,8 +21,8 @@ func set_default_audio_settings() -> void:
 	config_file.set_value("audio", "master_volum", 0)
 	config_file.set_value("audio", "music_muted", false)
 	config_file.set_value("audio", "music_volum", 0)
-	config_file.set_value("audio", "SFX_muted", false)
-	config_file.set_value("audio", "SFX_volum", 0)
+	config_file.set_value("audio", "sfx_muted", false)
+	config_file.set_value("audio", "sfx_volum", 0)
 
 func save_audio_settings(key: String, value):
 	config_file.set_value('audio', key, value)

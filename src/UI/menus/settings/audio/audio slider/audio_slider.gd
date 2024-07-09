@@ -13,3 +13,4 @@ func _ready() -> void:
 
 func _on_drag_ended(_value_changed: bool) -> void:
 	AudioServer.set_bus_volume_db(audio_bus, value)
+	ConfigFileHandler.save_audio_settings(bus_name.to_lower() + '_volum', value)
