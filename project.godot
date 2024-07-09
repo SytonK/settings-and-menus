@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 buses/default_bus_layout="res://resources/audio/default_bus_layout.tres"
 
+[autoload]
+
+ConfigFileHandler="*res://resources/config/config_file_handler.gd"
+
 [input]
 
 pause={
