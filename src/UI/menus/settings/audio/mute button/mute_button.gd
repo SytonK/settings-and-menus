@@ -13,3 +13,4 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	AudioServer.set_bus_mute(audio_bus, !AudioServer.is_bus_mute(audio_bus))
+	ConfigFileHandler.save_audio_settings(bus_name.to_lower() + '_muted', AudioServer.is_bus_mute(audio_bus))
