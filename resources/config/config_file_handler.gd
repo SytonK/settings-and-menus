@@ -14,6 +14,7 @@ func _ready() -> void:
 		config_file.save(SETTINGS_FILE_PATH)
 	else:
 		config_file.load(SETTINGS_FILE_PATH)
+		load_audio_settings()
 
 
 func set_default_audio_settings() -> void:
@@ -28,8 +29,10 @@ func save_audio_settings(key: String, value):
 	config_file.set_value('audio', key, value)
 	config_file.save(SETTINGS_FILE_PATH)
 
-func load_audio_settings() -> Dictionary:
-	var audio_settings = {}
-	for key in config_file.get_section_keys('audio'):
-		audio_settings[key] = config_file.get_value('audio', key)
-	return audio_settings
+func load_audio_settings() -> void:
+	AudioServer.set_bus_mute(0, config_file.get_value('audio', 'master_muted'))
+	AudioServer.set_bus_volume_db(0, config_file.get_value('audio', 'master_volum'))
+	AudioServer.set_bus_mute(1, config_file.get_value('audio', 'music_muted'))
+	AudioServer.set_bus_volume_db(1, config_file.get_value('audio', 'music_volum'))
+	AudioServer.set_bus_mute(2, config_file.get_value('audio', 'sfx_muted'))
+	AudioServer.set_bus_volume_db(2, config_file.get_value('audio', 'sfx_volum'))
