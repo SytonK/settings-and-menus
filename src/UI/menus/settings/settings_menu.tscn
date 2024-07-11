@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cm1vo0wwx040h"]
 
-[ext_resource type="PackedScene" uid="uid://d0m0ksp5njn7v" path="res://src/UI/menus/settings/rebind/rebind_menu.tscn" id="1_mm0fn"]
+[ext_resource type="PackedScene" uid="uid://d0m0ksp5njn7v" path="res://src/UI/menus/settings/keybind/keybind_menu.tscn" id="1_mm0fn"]
 [ext_resource type="PackedScene" uid="uid://iag6cbwcx0ud" path="res://src/UI/menus/settings/audio/audio_menu.tscn" id="2_2g3vo"]
 
 [node name="SettingsMenu" type="Control"]

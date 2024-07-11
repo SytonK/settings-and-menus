@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bakj4si0q0a4m"]
 
-[ext_resource type="Script" path="res://src/UI/menus/settings/rebind/input action rebind button/input_action_rebind_button.gd" id="1_cp5wh"]
+[ext_resource type="Script" path="res://src/UI/menus/settings/keybind/input action rebind button/input_action_rebind_button.gd" id="1_cp5wh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t45qf"]
 bg_color = Color(0, 0, 0, 0.5)
