@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cm1vo0wwx040h"]
+[gd_scene load_steps=4 format=3 uid="uid://cm1vo0wwx040h"]
 
 [ext_resource type="PackedScene" uid="uid://d0m0ksp5njn7v" path="res://src/UI/menus/settings/keybind/keybind_menu.tscn" id="1_mm0fn"]
+[ext_resource type="Script" path="res://src/UI/menus/settings/settings_menu.gd" id="1_yj076"]
 [ext_resource type="PackedScene" uid="uid://iag6cbwcx0ud" path="res://src/UI/menus/settings/audio/audio_menu.tscn" id="2_2g3vo"]
 
 [node name="SettingsMenu" type="Control"]
@@ -10,10 +11,40 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_yj076")
 
-[node name="RebindMenu" parent="." instance=ExtResource("1_mm0fn")]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 200.0
+offset_top = 108.0
+offset_right = -200.0
+offset_bottom = -108.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="AudioMenu" parent="." instance=ExtResource("2_2g3vo")]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="KeybindsSettingsButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Keybinds
+"
+
+[node name="AudioSettingsButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Audio"
+
+[node name="RebindMenu" parent="VBoxContainer" instance=ExtResource("1_mm0fn")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AudioMenu" parent="VBoxContainer" instance=ExtResource("2_2g3vo")]
 visible = false
-layout_mode = 1
+layout_mode = 2
+size_flags_vertical = 3
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/KeybindsSettingsButton" to="." method="_on_keybinds_settings_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/AudioSettingsButton" to="." method="_on_audio_settings_button_pressed"]
