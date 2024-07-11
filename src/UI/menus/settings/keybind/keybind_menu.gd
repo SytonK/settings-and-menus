@@ -1,7 +1,7 @@
 extends Control
 
 
-const INPUT_ACTION_REBIND_BUTTON = preload("res://src/UI/menus/settings/rebind/input action rebind button/input_action_rebind_button.tscn")
+const INPUT_ACTION_REBIND_BUTTON = preload("res://src/UI/menus/settings/keybind/input action rebind button/input_action_rebind_button.tscn")
 
 
 @onready var actions_list: VBoxContainer = $Panel/MarginContainer/VBoxContainer/ScrollContainer/ActionsList

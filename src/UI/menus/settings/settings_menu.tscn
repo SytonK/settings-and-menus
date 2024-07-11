@@ -12,8 +12,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="RebindMenu" parent="." instance=ExtResource("1_mm0fn")]
-visible = false
 layout_mode = 1
 
 [node name="AudioMenu" parent="." instance=ExtResource("2_2g3vo")]
+visible = false
 layout_mode = 1
