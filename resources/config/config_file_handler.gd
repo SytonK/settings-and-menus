@@ -10,6 +10,7 @@ var config_file: ConfigFile = ConfigFile.new()
 func _ready() -> void:
 	if !FileAccess.file_exists(SETTINGS_FILE_PATH):
 		_set_default_audio_settings()
+		_set_default_keybind_settings()
 		
 		config_file.save(SETTINGS_FILE_PATH)
 	else:
@@ -37,3 +38,9 @@ func _load_audio_settings() -> void:
 	AudioServer.set_bus_volume_db(1, config_file.get_value('audio', 'music_volum'))
 	AudioServer.set_bus_mute(2, config_file.get_value('audio', 'sfx_muted'))
 	AudioServer.set_bus_volume_db(2, config_file.get_value('audio', 'sfx_volum'))
+
+
+func _set_default_keybind_settings() -> void:
+	config_file.set_value("keybind", "example1", 1)
+	config_file.set_value("keybind", "example2", 2)
+	config_file.set_value("keybind", "example3", 3)
