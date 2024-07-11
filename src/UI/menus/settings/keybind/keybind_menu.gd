@@ -24,6 +24,7 @@ func _input(event: InputEvent) -> void:
 			
 			InputMap.action_erase_events(remapping_button.action_name)
 			InputMap.action_add_event(remapping_button.action_name, event)
+			ConfigFileHandler.save_keybinding(remapping_button.action_name, event)
 			remapping_button.is_remapping =  false
 			remapping_button = null
 			
