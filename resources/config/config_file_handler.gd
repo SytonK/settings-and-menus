@@ -17,6 +17,7 @@ func _ready() -> void:
 		config_file.load(SETTINGS_FILE_PATH)
 		
 		_load_audio_settings()
+		_load_keybind_settings()
 
 
 func _set_default_audio_settings() -> void:
@@ -54,3 +55,18 @@ func save_keybinding(action: String, event: InputEvent):
 	
 	config_file.set_value('keybind', action, event_str)
 	config_file.save(SETTINGS_FILE_PATH)
+
+func _load_keybind_settings() -> void:
+	for keybind in config_file.get_section_keys('keybind'):
+		var input_event: InputEvent
+		var event_str: String = config_file.get_value('keybind', keybind)
+		
+		if event_str.contains('mouse_'):
+			input_event = InputEventMouseButton.new()
+			input_event.button_index = int(event_str.split('_')[1])
+		else:
+			input_event = InputEventKey.new()
+			input_event.keycode = OS.find_keycode_from_string(event_str)
+		
+		InputMap.action_erase_events(keybind)
+		InputMap.action_add_event(keybind, input_event)
