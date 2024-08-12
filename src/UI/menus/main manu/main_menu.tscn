@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://v7vc7iejlrb0"]
+[gd_scene load_steps=4 format=3 uid="uid://v7vc7iejlrb0"]
 
 [ext_resource type="Script" path="res://src/UI/components/new scene button/change_scene_button.gd" id="1_1k7md"]
 [ext_resource type="Script" path="res://src/UI/components/quit button/quit_button.gd" id="2_3ou87"]
+[ext_resource type="Script" path="res://src/UI sound/ui_sound.gd" id="3_vfpad"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -10,6 +11,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="UISound" type="Node" parent="." node_paths=PackedStringArray("root")]
+script = ExtResource("3_vfpad")
+root = NodePath("..")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
