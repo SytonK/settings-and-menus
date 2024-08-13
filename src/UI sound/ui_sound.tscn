@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0n0xk6b0q78a"]
-
-[ext_resource type="Script" path="res://src/UI sound/ui_sound.gd" id="1_1lcpt"]
-
-[node name="UISound" type="Node"]
-script = ExtResource("1_1lcpt")
