@@ -25,6 +25,7 @@ func _install_sounds(node: Node) -> void:
 	for childe in node.get_children():
 		if childe is Button:
 			childe.mouse_entered.connect(_ui_sound_play.bind(&"UI_Hover"))
+			childe.focus_entered.connect(_ui_sound_play.bind(&"UI_Hover"))
 			childe.pressed.connect(_ui_sound_play.bind(&"UI_Click"))
 		
 		_install_sounds(childe)
