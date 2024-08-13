@@ -31,4 +31,5 @@ func _install_sounds(node: Node) -> void:
 
 
 func _ui_sound_play(sound: String) -> void:
-	sounds[sound].play()
+	if sounds[sound].is_inside_tree():
+		sounds[sound].play()
