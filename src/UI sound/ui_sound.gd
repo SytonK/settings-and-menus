@@ -5,8 +5,8 @@ class_name UISound extends Node
 
 
 @onready var sounds = {
-	&"UI_Hover": AudioStreamPlayer.new(),
-	&"UI_Click": AudioStreamPlayer.new()
+	&"UIHover": AudioStreamPlayer.new(),
+	&"UIClick": AudioStreamPlayer.new()
 }
 
 
@@ -24,9 +24,9 @@ func _ready() -> void:
 func _install_sounds(node: Node) -> void:
 	for childe in node.get_children():
 		if childe is Button:
-			childe.mouse_entered.connect(_ui_sound_play.bind(&"UI_Hover"))
-			childe.focus_entered.connect(_ui_sound_play.bind(&"UI_Hover"))
-			childe.pressed.connect(_ui_sound_play.bind(&"UI_Click"))
+			childe.mouse_entered.connect(_ui_sound_play.bind(&"UIHover"))
+			childe.focus_entered.connect(_ui_sound_play.bind(&"UIHover"))
+			childe.pressed.connect(_ui_sound_play.bind(&"UIClick"))
 		
 		_install_sounds(childe)
 
