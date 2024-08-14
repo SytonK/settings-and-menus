@@ -16,7 +16,7 @@ func _ready() -> void:
 	
 	for sound in sounds.keys():
 		sounds[sound].stream = load("res://assets/sound/effects/" + str(sound) + ".mp3")
-		sounds[sound].bus = &"UISound"
+		sounds[sound].bus = &"UI"
 		add_child(sounds[sound])
 	
 	_install_sounds(root)
