@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://v7vc7iejlrb0"]
+[gd_scene load_steps=6 format=3 uid="uid://v7vc7iejlrb0"]
 
 [ext_resource type="Script" path="res://src/UI/components/new scene button/change_scene_button.gd" id="1_1k7md"]
 [ext_resource type="Script" path="res://src/UI/components/quit button/quit_button.gd" id="2_3ou87"]
 [ext_resource type="Script" path="res://src/UI/components/sound button/sound_button.gd" id="3_1oav8"]
+[ext_resource type="Texture2D" uid="uid://sl1hp32h80f" path="res://icon.svg" id="4_5qvm1"]
+[ext_resource type="Script" path="res://src/UI/components/sound texture button/sound_texture_button.gd" id="5_xsx33"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -53,8 +55,7 @@ layout_mode = 2
 text = "Sound2"
 script = ExtResource("3_1oav8")
 
-[node name="SoundButton3" type="Button" parent="VBoxContainer"]
+[node name="SoundTextureButton" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-text = "Sound3
-"
-script = ExtResource("3_1oav8")
+texture_normal = ExtResource("4_5qvm1")
+script = ExtResource("5_xsx33")
